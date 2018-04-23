@@ -1,0 +1,40 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: glpi
+  labels:
+    k8s-app: glpi
+spec:
+  template:
+    metadata:
+      labels:
+        k8s-app: glpi
+    spec:
+      containers:
+        - name: glpi
+          image: 364f6ae4b5f1/glpi
+          ports:
+            - name: glpi
+              containerPort: 80
+          volumeMounts:
+            - name: glpi-storage-config
+              mountPath: "/var/www/html/config"
+              subPath: config
+      volumes:
+        - name: glpi-storage-config
+          persistentVolumeClaim:
+            claimName: pvc-glpi-config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: glpi
+  labels:
+    k8s-app: glpi
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    k8s-app: glpi
