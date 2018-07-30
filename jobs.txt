@@ -1,0 +1,110 @@
+ARIANE#BARCARIH
+ SCRIPTNAME "d:\exploit1fs1\prod\scripte\expl\barcarih.bat"
+ STREAMLOGON EA-FR\tws85
+ DESCRIPTION "Archivage journalier lecteur H de  ariane "
+ TASKTYPE WINDOWS
+ RECOVERY STOP
+
+
+ARIANE#BHEBARIH_ARIANE
+ SCRIPTNAME "d:\exploit1fs1\prod\scripte\expl\barcarih.bat"
+ STREAMLOGON EA-FR\tws85
+ DESCRIPTION "Archivage journalier lecteur H de  ariane "
+ TASKTYPE WINDOWS
+ RECOVERY CONTINUE
+
+
+ARIANE#BLEGARI
+ SCRIPTNAME "d:\exploit1fs1\prod\scripte\expl\blegari.bat"
+ STREAMLOGON EA-FR\tws85
+ DESCRIPTION "Archivage legal  du F:\ariane backup et F:\penelope Backup"
+ TASKTYPE WINDOWS
+ RECOVERY CONTINUE
+
+
+ARIANE#BMENARI
+ SCRIPTNAME "d:\exploit1fs1\prod\scripte\expl\bmenari.bat"
+ STREAMLOGON EA-FR\tws85
+ DESCRIPTION "Archivage mensuel de  ariane "
+ TASKTYPE WINDOWS
+ RECOVERY STOP
+
+
+ARIANE#DCEXT131
+ SCRIPTNAME "d:\exploit1fs1\prod\scripte\ifc\dcext131.bat"
+ STREAMLOGON EA-FR\tws85
+ DESCRIPTION "mise a jour tcexcub_ ifc 13eme mois partie 2"
+ TASKTYPE WINDOWS
+ RECOVERY STOP
+
+
+ARIANE#DCEXT132
+ SCRIPTNAME "d:\exploit1fs1\prod\scripte\ifc\dcext132.bat"
+ STREAMLOGON EA-FR\tws85
+ DESCRIPTION "mise a jour tcexcub_ ifc 13eme mois partie 1"
+ TASKTYPE WINDOWS
+ RECOVERY STOP
+ 
+ 
+ PVL0-CYG-01#BINCDEVCRM1_PPA0TSM01
+ SCRIPTNAME "ssh -o batchmode=yes -o ServerAliveInterval=30 root@PPA0-TSM-01.europ-assistance.fr  \". ~/.profile; /exploit1fs1/prod/scripte/expl/bincdevcrm1\""
+ STREAMLOGON tws85
+ DESCRIPTION "Sauvegarde incrementale du serveur devcrm1"
+ TASKTYPE OTHER
+ RECOVERY STOP
+
+
+PVL0-CYG-01#BINCDEVCRM_PPA0TSM01
+ SCRIPTNAME "ssh -o batchmode=yes -o ServerAliveInterval=30 root@PPA0-TSM-01.europ-assistance.fr  \". ~/.profile; /exploit1fs1/prod/scripte/expl/bincdevcrm\""
+ STREAMLOGON tws85
+ DESCRIPTION "Sauvegarde incrementale du serveur DEVCRM"
+ TASKTYPE OTHER
+ RECOVERY STOP
+
+
+PVL0-CYG-01#BINCDOT2_PPA0TSM01
+ SCRIPTNAME "ssh -o batchmode=yes -o ServerAliveInterval=30 root@PPA0-TSM-01.europ-assistance.fr  \". ~/.profile; /exploit1fs1/prod/scripte/expl/bincdot2\""
+ STREAMLOGON tws85
+ DESCRIPTION "Sauvegarde incrementale du serveur dotprod"
+ TASKTYPE OTHER
+ RECOVERY STOP
+
+
+PVL0-CYG-01#BINCDOT3_PPA0TSM01
+ SCRIPTNAME "ssh -o batchmode=yes -o ServerAliveInterval=30 root@PPA0-TSM-01.europ-assistance.fr  \". ~/.profile; /exploit1fs1/prod/scripte/expl/bincdot3\""
+ STREAMLOGON tws85
+ DESCRIPTION "Sauvegarde incrementale du serveur dotprod3"
+ TASKTYPE OTHER
+ RECOVERY STOP
+
+
+PVL0-CYG-01#BINCDOTD_PPA0TSM01
+ SCRIPTNAME "ssh -o batchmode=yes -o ServerAliveInterval=30 root@PPA0-TSM-01.europ-assistance.fr  \". ~/.profile; /exploit1fs1/prod/scripte/expl/bincdotd\""
+ STREAMLOGON tws85
+ DESCRIPTION "Sauvegarde incrementale du serveur dotdev"
+ TASKTYPE OTHER
+ RECOVERY STOP
+
+
+PVL0-CYG-01#BINCDOTPREPROD_PPA0TSM01
+ SCRIPTNAME "ssh -o batchmode=yes -o ServerAliveInterval=30 root@PPA0-TSM-01.europ-assistance.fr  \". ~/.profile; /exploit1fs1/prod/scripte/expl/bincdotpreprod\""
+ STREAMLOGON tws85
+ DESCRIPTION "Sauvegarde incrementale du serveur dorpreprod"
+ TASKTYPE OTHER
+ RECOVERY STOP
+
+
+PVL0-CYG-01#BINCDOT_PPA0TSM01
+ SCRIPTNAME "ssh -o batchmode=yes -o ServerAliveInterval=30 root@PPA0-TSM-01.europ-assistance.fr  \". ~/.profile; /exploit1fs1/prod/scripte/expl/bincdot\""
+ STREAMLOGON tws85
+ DESCRIPTION "Sauvegarde incrementale du serveur dotprod"
+ TASKTYPE OTHER
+ RECOVERY STOP
+
+
+PVL0-CYG-01#BINCDPW0CCT1_PPA0TSM01
+ SCRIPTNAME "ssh -o batchmode=yes -o ServerAliveInterval=30 root@PPA0-TSM-01.europ-assistance.fr  \". ~/.profile; /exploit1fs1/prod/scripte/expl/bincdpw0cct1\""
+ STREAMLOGON tws85
+ DESCRIPTION "Sauvegarde incrementale du serveur DPW0-CCT-01"
+ TASKTYPE OTHER
+ RECOVERY STOP
